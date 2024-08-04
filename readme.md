@@ -1,8 +1,4 @@
----
-editor: visual
-title: Readme
-toc-title: Table of contents
----
+# Readme
 
 ## Imagem para ASCII
 
@@ -50,16 +46,13 @@ entender:
 
 Para utilizar a função, primeiro instale os pacotes necessários:
 
-::: cell
-``` {.r .cell-code}
+``` r
 install.packages(c("imager", "gtools", "dplyr", "purrr", "ggplot2", "here"))
 ```
-:::
 
 A construção da função:
 
-::: cell
-``` {.r .cell-code}
+``` r
 imagem_para_ascii <- function(path,
                               resize_img = .5){
   #diretório da imagem
@@ -122,25 +115,23 @@ imagem_para_ascii <- function(path,
   
 }
 ```
-:::
 
 PS: se for usar a função, carrega ela na pasta R, onde ela está com o
 Roxygen Skeleton
 
 ### Parâmetros
 
--   `path`: Diretório para a imagem que será transformada em ASCII. A
-    imagem deve estar no formato `.jpg`.
+- `path`: Diretório para a imagem que será transformada em ASCII. A
+  imagem deve estar no formato `.jpg`.
 
--   `resize_img`: Redimensiona a imagem para um tamanho menor. O padrão
-    é 0.5.
+- `resize_img`: Redimensiona a imagem para um tamanho menor. O padrão é
+  0.5.
 
 ### Fazendo uso
 
 Visualizando a imagem original
 
-::: cell
-``` {.r .cell-code}
+``` r
 # Diretório da imagem
 path_image <- here::here('data/amor.jpg')
 
@@ -151,19 +142,8 @@ amor <- imager::load.image(path_image)
 plot(amor)
 ```
 
-::: cell-output-display
-![](readme_files/figure-markdown/unnamed-chunk-4-1.png)
-:::
-:::
-
 Visualizando a imagem em Ascii
 
-::: cell
-``` {.r .cell-code}
+``` r
 imagem_para_ascii(path_image)
 ```
-
-::: cell-output-display
-![](readme_files/figure-markdown/unnamed-chunk-5-1.png)
-:::
-:::

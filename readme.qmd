@@ -1,7 +1,7 @@
 ---
 title: "Readme"
 format:
-    html: 
+    markdown: 
        embed-resources: true
 editor: visual
 ---
